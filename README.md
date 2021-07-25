@@ -1,4 +1,4 @@
-# -kraken--metagenics
+# kraken--Metagenomics
 
 ## kraken
 ### &#x202b; پکیج های استفاده شده در پروژه شامل :
