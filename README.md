@@ -1,34 +1,47 @@
-# Kraken metagenomics
+# Kraken Metagenomics
 
-## kraken
-### &#x202b; پکیج های استفاده شده در پروژه شامل :
+The **Kraken Metagenomics** project aims to provide a solution for analyzing metagenomic data using the Kraken method. Metagenomics is a field of study that involves the analysis of genetic material recovered directly from environmental samples. It allows researchers to gain insights into the composition and function of microbial communities present in various ecosystems.
 
-- os  : &#x202b;  خواندن ادرس فایل ها 
-- glob : &#x202b;  خواندن ادرس فایل ها 
-- gzip : &#x202b;  خواندن فایل های زیپ شده 
-- pickle : &#x202b;  ذخیره ایندکس در حافظه
-- pandas : &#x202b; خواندن اطلاعات باکتری ها
-- ete3.NCBITaxa : &#x202b; برای خواندن درخت حیات باکتری ها
-- ncbi_genome_download : &#x202b; دانلود ژنوم باکتری ها به صورت زیپ از ncbi
-### نحوه اجرا
-```
-kraken.ipynb
-```
-&#x202b; فایل kraken.ipynb اجرا شود ابتدا درخت حیات را دانود میکند.
+## Kraken Method
 
-&#x202b;سپس ژنوم باکتری ها دانلود میشود. اگر قبلا دانلود شده، از اجرای این قسمت صرف نظر کنید.
+The Kraken method is a widely used tool for taxonomic classification of metagenomic sequences. It leverages a database of reference genomes to assign taxonomic labels to the input sequences based on sequence matches. The Kraken tool utilizes a k-mer-based approach to efficiently classify DNA sequences, making it suitable for analyzing large-scale metagenomic datasets.
 
-&#x202b;سپس index فایل ساخته میشود. اگر قبلا ساخته شده میتوان از اجرا این قسمت صرف نظر کرده و فقط 
-آن را از حافظه بارگزاری کنید.
+## Dependencies
 
-&#x202b;سپس با دادن ورودی الگوریتم بر روی read ها اجرا میشود
+The project utilizes the following packages:
 
-### ساخت متاژنومیک
+- `os`: Used for reading file addresses.
+- `glob`: Enables reading file addresses.
+- `gzip`: Allows reading zipped files.
+- `pickle`: Used to store the index in memory.
+- `pandas`: Facilitates reading information about bacteria.
+- `ete3.NCBITaxa`: Used to read the tree of life of bacteria.
+- `ncbi_genome_download`: Enables downloading bacterial genomes in zip format from NCBI.
 
-```
-metagenomics-simulator.ipynb
-```
-&#x202b;با اجرای این فایل ابتدا 10 عدد از باکتری ها به صورت رندم انتخاب میشوند.
-&#x202b;سپس آنها به تعداد فرآونی داده شده تکثیر شده و جهش روی آن اعمال میشود.
-&#x202b; از ژنوم ها خوانش هایی مشابه دستگاه(خطای خوانش) گرفته میشود.
-&#x202b; در فایلmetagenomic.txt ذخیره میشود.
+## How to Run
+
+To execute the project, follow these steps:
+
+1. Open the `kraken.ipynb` file.
+2. Upon execution, the script will first delete the existing tree of life.
+3. Next, the bacterial genomes will be downloaded. If they have already been downloaded, this step will be skipped.
+4. The index of the file will be created. If it has already been generated, this step can be skipped, and the index will be loaded from memory.
+5. Provide the input and execute the algorithm on the reads.
+
+## Construction of Metagenomics
+
+To construct metagenomics data, follow these steps:
+
+1. Open the `metagenomics-simulator.ipynb` file.
+2. Execute the file to randomly select 10 bacteria.
+3. Multiply the selected bacteria by the desired number of times and apply mutations.
+4. Generate readings from the genomes similar to device-generated errors.
+5. Save the generated data in the `metagenomic.txt` file.
+
+## Contributions
+
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
